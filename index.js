@@ -21,6 +21,17 @@ function findLongestWord(param) {
           maxAvengers = vengador
         }
     }
-    console.log('La cadena más larga es '+maxAvengers)
+    console.log('La cadena más larga es '+maxAvengers);
 }
 findLongestWord(avengers)
+
+//Iteración #3: Calcular la suma
+let sumTotal = 0;
+const numbers = [1, 2, 3, 5, 45, 37, 58];
+function sumAll(param) {
+    for (var numeros of param) {
+        sumTotal += numeros;
+      }
+    console.log('La suma de todos los números es '+sumTotal)
+}
+sumAll(numbers)
