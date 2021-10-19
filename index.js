@@ -86,6 +86,27 @@ function removeDuplicates(param) {
 }
 removeDuplicates(duplicates)
 
+//Iteración #7: Buscador de nombres
+console.log('//Iteración #7')
+const nameFinder = ['Peter','Steve','Tony','Natasha','Clint','Logan','Xabier','Bruce','Peggy','Jessica','Marc'];
+function finderName(param, nametofind) {
+    let exist = 0;
+    nameFinder.forEach(
+        function (element) {
+          if (element == nametofind){
+            exist = 1;
+          }
+        }
+      );
+    if (exist != 0) {
+        var indexElement = nameFinder.indexOf(nametofind);
+        console.log('True, '+nametofind+' existe en el array y su posición es ' +indexElement);
+    } else {
+        console.log('False')
+    }
+}
+finderName(nameFinder, 'Logan')
+
 
 
 
