@@ -1,4 +1,5 @@
 //Iteración #1: Buscar el máximo
+console.log('//Iteración #1')
 function sum(numberOne , numberTwo) {
     if (numberOne > numberTwo) {
         console.log('El número más alto es '+numberOne);
@@ -11,6 +12,7 @@ function sum(numberOne , numberTwo) {
 sum(9,5);
 
 //Iteración #2: Buscar la palabra más larga
+console.log('//Iteración #2')
 let max = 0;
 let maxAvengers = '';
 const avengers = ['Hulk', 'Thor', 'IronMan', 'Captain A.', 'Spiderman', 'Captain M.'];
@@ -26,6 +28,7 @@ function findLongestWord(param) {
 findLongestWord(avengers)
 
 //Iteración #3: Calcular la suma
+console.log('//Iteración #3')
 let sumTotal = 0;
 const numbers = [1, 2, 3, 5, 45, 37, 58];
 function sumAll(param) {
@@ -37,6 +40,7 @@ function sumAll(param) {
 sumAll(numbers)
 
 //Iteración #4: Calcular el promedio
+console.log('//Iteración #4')
 const numbers2 = [12, 21, 38, 5, 45, 37, 6];
 var suma = 0;
 function average(param) {
@@ -47,3 +51,21 @@ function average(param) {
       console.log('El promedio del array es '+Math.round(promedio))
 }
 average(numbers2)
+
+//Iteración #5: Calcular promedio de strings
+console.log('//Iteración #5')
+const mixedElements = [6, 1, 'Rayo', 1, 'vallecano', '10', 'upgrade', 8, 'hub'];
+function mix(param) {
+    let nummix = 0;
+    let wordmix = 0;
+    for (let mixto of mixedElements) {
+      if (typeof mixto === 'number'){
+        nummix += mixto;
+      }else {
+        wordmix += mixto.length;
+      }
+    }
+    console.log('El total de numeros sumados son: ' + nummix);
+    console.log('El total de letras sumadss son: ' + wordmix);
+}
+mix(mixedElements)
