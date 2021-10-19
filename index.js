@@ -74,15 +74,15 @@ mix(mixedElements)
 console.log('//Iteración #6')
 const duplicates = ['sushi','pizza','burger','potatoe','pasta','ice-cream','pizza','chicken','onion rings','pasta','soda'];
 function removeDuplicates(param) {
-    let sorted_duplicates = duplicates.sort(); 
-    let results = [];
-    for (var i = 0; i < duplicates.length-1; i++) {
+    let sorted_duplicates = param.sort(); 
+    
+    for (var i = 0; i < param.length-1; i++) {
         
         if (sorted_duplicates[i + 1] == sorted_duplicates[i]) {
-            duplicates.splice(i, 1)
+            param.splice(i, 1)
         }
     }
-    console.log(duplicates)
+    console.log(param)
 }
 removeDuplicates(duplicates)
 
@@ -106,6 +106,23 @@ function finderName(param, nametofind) {
     }
 }
 finderName(nameFinder, 'Logan')
+
+//Iteración #8: Contador de repeticiones
+console.log('//Iteración #8')
+const counterWords = ['code','repeat','eat','sleep','code','enjoy','sleep','code','enjoy','upgrade','code'];
+function repeatCounter(param) {
+    const uniqueWords = param.filter((x, i, a) => a.indexOf(x) == i)
+    for (var aa of uniqueWords) {
+        let elnumber = 0;
+        for (var i = 0; i < param.length; i++) {
+            if (aa == param[i]) {
+                elnumber+=1;
+            }
+        }
+        console.log(aa + ' esta '+elnumber+' veces');
+    }
+}
+repeatCounter(counterWords);
 
 
 
