@@ -69,3 +69,23 @@ function mix(param) {
     console.log('El total de letras sumadss son: ' + wordmix);
 }
 mix(mixedElements)
+
+//Iteración #6: Valores únicos
+console.log('//Iteración #6')
+const duplicates = ['sushi','pizza','burger','potatoe','pasta','ice-cream','pizza','chicken','onion rings','pasta','soda'];
+function removeDuplicates(param) {
+    let sorted_duplicates = duplicates.sort(); 
+    let results = [];
+    for (var i = 0; i < duplicates.length-1; i++) {
+        
+        if (sorted_duplicates[i + 1] == sorted_duplicates[i]) {
+            duplicates.splice(i, 1)
+        }
+    }
+    console.log(duplicates)
+}
+removeDuplicates(duplicates)
+
+
+
+
