@@ -124,6 +124,24 @@ function repeatCounter(param) {
 }
 repeatCounter(counterWords);
 
-
+//Otra forma
+console.log('//Otra forma Iteración #8')
+let newList = [];
+for (var objeto of counterWords) {
+    if (!newList.includes(objeto)){
+        newList.push(objeto);
+    }   
+}
+for (var object2 of newList) {
+    let newObject = object2;
+    let number = 0;
+    for (var objeto2 of counterWords) {
+        if (newObject === objeto2) {
+            number += 1;
+        }
+    }
+    console.log(newObject+' se repite '+number+' veces')
+}
+//console.log(newList)
 
 
